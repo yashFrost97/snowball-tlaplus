@@ -1,0 +1,738 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.14 of 10 July 2019
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 97 and seed 3008221759467080644 with 6 workers on 12 cores with 1200MB heap and 2699MB offheap memory [pid: 1164] (Windows 10 10.0 amd64, AdoptOpenJDK 11.0.3 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file D:\TLA+\toolbox\snowball_atomic\snowball_atomic.toolbox\Model_1\MC.tla
+Parsing file D:\TLA+\toolbox\snowball_atomic\snowball_atomic.toolbox\Model_1\snowball_atomic.tla
+Parsing file D:\TLA+\toolbox\plugins\org.lamport.tlatools_1.0.0.201907102009\tla2sany\StandardModules\TLC.tla
+Parsing file D:\TLA+\toolbox\plugins\org.lamport.tlatools_1.0.0.201907102009\tla2sany\StandardModules\Sequences.tla
+Parsing file D:\TLA+\toolbox\plugins\org.lamport.tlatools_1.0.0.201907102009\tla2sany\StandardModules\Integers.tla
+Parsing file D:\TLA+\toolbox\plugins\org.lamport.tlatools_1.0.0.201907102009\tla2sany\StandardModules\Naturals.tla
+Parsing file D:\TLA+\toolbox\plugins\org.lamport.tlatools_1.0.0.201907102009\tla2sany\StandardModules\FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module Integers
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module snowball_atomic
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2020-05-22 01:43:19)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 1 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2020-05-22 01:43:20.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(20) at 2020-05-22 01:43:21: 17,954 states generated, 4,766 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2192:0 @!@!@
+Checking temporal properties for the complete state space with 4766 total distinct states at (2020-05-22 01:43:21)
+@!@!@ENDMSG 2192 @!@!@
+@!@!@STARTMSG 2116:1 @!@!@
+Temporal properties were violated.
+
+@!@!@ENDMSG 2116 @!@!@
+@!@!@STARTMSG 2264:1 @!@!@
+The following behavior constitutes a counter-example:
+
+@!@!@ENDMSG 2264 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ decision = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ counter = {}
+/\ pc = <<"LOOOP", "LOOOP", "LOOOP", "LOOOP", "LOOOP">>
+/\ lastcol = <<0, 0, 0, 0, 0>>
+/\ colors = <<1, 0, 2, 2, 2>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 0
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <LOOOP line 136, col 16 to line 152, col 72 of module snowball_atomic>
+/\ decision = <<FALSE, FALSE, FALSE, FALSE, TRUE>>
+/\ counter = {[color |-> 1, node |-> 5]}
+/\ pc = <<"LOOOP", "LOOOP", "LOOOP", "LOOOP", "WAIT">>
+/\ lastcol = <<0, 0, 0, 0, 0>>
+/\ colors = <<1, 0, 2, 2, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 0
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <LOOOP line 136, col 16 to line 152, col 72 of module snowball_atomic>
+/\ decision = <<FALSE, FALSE, FALSE, FALSE, TRUE>>
+/\ counter = {[color |-> 1, node |-> 1], [color |-> 1, node |-> 5]}
+/\ pc = <<"WAIT", "LOOOP", "LOOOP", "LOOOP", "WAIT">>
+/\ lastcol = <<0, 0, 0, 0, 0>>
+/\ colors = <<1, 0, 2, 2, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 0
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <WAIT line 154, col 15 to line 160, col 62 of module snowball_atomic>
+/\ decision = <<FALSE, FALSE, FALSE, FALSE, TRUE>>
+/\ counter = {[color |-> 1, node |-> 1], [color |-> 1, node |-> 5]}
+/\ pc = <<"WAIT", "LOOOP", "LOOOP", "LOOOP", "LOOOP">>
+/\ lastcol = <<0, 0, 0, 0, 0>>
+/\ colors = <<1, 0, 2, 2, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 0
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <LOOOP line 136, col 16 to line 152, col 72 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, FALSE, FALSE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"WAIT", "WAIT", "LOOOP", "LOOOP", "LOOOP">>
+/\ lastcol = <<0, 0, 0, 0, 0>>
+/\ colors = <<1, 0, 2, 2, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 0
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <WAIT line 154, col 15 to line 160, col 62 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, FALSE, FALSE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"CONV0", "WAIT", "LOOOP", "LOOOP", "LOOOP">>
+/\ lastcol = <<0, 0, 0, 0, 0>>
+/\ colors = <<1, 0, 2, 2, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 0
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <WAIT line 154, col 15 to line 160, col 62 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, FALSE, FALSE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"CONV0", "LOOOP", "LOOOP", "LOOOP", "LOOOP">>
+/\ lastcol = <<0, 0, 0, 0, 0>>
+/\ colors = <<1, 0, 2, 2, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 0
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <LOOOP line 136, col 16 to line 152, col 72 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, FALSE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"CONV0", "LOOOP", "LOOOP", "WAIT", "LOOOP">>
+/\ lastcol = <<0, 0, 0, 0, 0>>
+/\ colors = <<1, 0, 2, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 0
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+9: <WAIT line 154, col 15 to line 160, col 62 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, FALSE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"CONV0", "LOOOP", "LOOOP", "LOOOP", "LOOOP">>
+/\ lastcol = <<0, 0, 0, 0, 0>>
+/\ colors = <<1, 0, 2, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 0
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+10: <LOOOP line 136, col 16 to line 152, col 72 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, FALSE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"CONV0", "CONV1", "LOOOP", "LOOOP", "LOOOP">>
+/\ lastcol = <<0, 0, 0, 0, 0>>
+/\ colors = <<1, 0, 2, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 0
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+11: <LOOOP line 136, col 16 to line 152, col 72 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, TRUE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 3],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"CONV0", "CONV1", "WAIT", "LOOOP", "LOOOP">>
+/\ lastcol = <<0, 0, 0, 0, 0>>
+/\ colors = <<1, 0, 1, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 0
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+12: <CONV1 line 187, col 16 to line 210, col 42 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, TRUE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 3],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"CONV0", "Done", "WAIT", "LOOOP", "LOOOP">>
+/\ lastcol = <<0, 1, 0, 0, 0>>
+/\ colors = <<1, 1, 1, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 1
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 1, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+13: <CONV0 line 162, col 16 to line 185, col 79 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, TRUE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 3],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"LOOOP", "Done", "WAIT", "LOOOP", "LOOOP">>
+/\ lastcol = <<0, 1, 0, 0, 0>>
+/\ colors = <<1, 1, 1, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 1
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 1, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+14: <WAIT line 154, col 15 to line 160, col 62 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, TRUE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 3],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"LOOOP", "Done", "LOOOP", "LOOOP", "LOOOP">>
+/\ lastcol = <<0, 1, 0, 0, 0>>
+/\ colors = <<1, 1, 1, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 1
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 1, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+15: <LOOOP line 136, col 16 to line 152, col 72 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, TRUE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 3],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"LOOOP", "Done", "LOOOP", "LOOOP", "CONV1">>
+/\ lastcol = <<0, 1, 0, 0, 0>>
+/\ colors = <<1, 1, 1, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 1
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 1, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+16: <CONV1 line 187, col 16 to line 210, col 42 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, TRUE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 3],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"LOOOP", "Done", "LOOOP", "LOOOP", "Done">>
+/\ lastcol = <<0, 1, 0, 0, 1>>
+/\ colors = <<1, 1, 1, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 2
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 1, 0, 0, 1>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+17: <LOOOP line 136, col 16 to line 152, col 72 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, TRUE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 3],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"LOOOP", "Done", "CONV1", "LOOOP", "Done">>
+/\ lastcol = <<0, 1, 0, 0, 1>>
+/\ colors = <<1, 1, 1, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 2
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 1, 0, 0, 1>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+18: <CONV1 line 187, col 16 to line 210, col 42 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, TRUE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 3],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"LOOOP", "Done", "Done", "LOOOP", "Done">>
+/\ lastcol = <<0, 1, 1, 0, 1>>
+/\ colors = <<1, 1, 1, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 3
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 1, 1, 0, 1>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+19: <LOOOP line 136, col 16 to line 152, col 72 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, TRUE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 3],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"LOOOP", "Done", "Done", "CONV1", "Done">>
+/\ lastcol = <<0, 1, 1, 0, 1>>
+/\ colors = <<1, 1, 1, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 3
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 1, 1, 0, 1>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+20: <CONV1 line 187, col 16 to line 210, col 42 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, TRUE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 3],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"LOOOP", "Done", "Done", "Done", "Done">>
+/\ lastcol = <<0, 1, 1, 1, 1>>
+/\ colors = <<1, 1, 1, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 4
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 1, 1, 1, 1>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+21: <LOOOP line 136, col 16 to line 152, col 72 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, TRUE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 3],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"WAIT", "Done", "Done", "Done", "Done">>
+/\ lastcol = <<0, 1, 1, 1, 1>>
+/\ colors = <<1, 1, 1, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 4
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 1, 1, 1, 1>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+22: <WAIT line 154, col 15 to line 160, col 62 of module snowball_atomic>
+/\ decision = <<FALSE, TRUE, TRUE, TRUE, TRUE>>
+/\ counter = { [color |-> 0, node |-> 2],
+  [color |-> 1, node |-> 1],
+  [color |-> 1, node |-> 3],
+  [color |-> 1, node |-> 4],
+  [color |-> 1, node |-> 5] }
+/\ pc = <<"CONV0", "Done", "Done", "Done", "Done">>
+/\ lastcol = <<0, 1, 1, 1, 1>>
+/\ colors = <<1, 1, 1, 1, 1>>
+/\ query = {}
+/\ count = <<1, 1, 1, 1, 1>>
+/\ oneConfidence = 4
+/\ decided = <<2, 2, 2, 2, 2>>
+/\ zeroConfidence = 0
+/\ majority = <<FALSE, FALSE, FALSE, FALSE, FALSE>>
+/\ conviction = <<0, 1, 1, 1, 1>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2122:4 @!@!@
+20: Back to state: <CONV0 line 162, col 16 to line 185, col 79 of module snowball_atomic>
+
+@!@!@ENDMSG 2122 @!@!@
+@!@!@STARTMSG 2267:0 @!@!@
+Finished checking temporal properties in 00s at 2020-05-22 01:43:21
+@!@!@ENDMSG 2267 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2020-05-22 01:43:21
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 121, col 1 to line 121, col 4 of module snowball_atomic>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 122, col 9 to line 134, col 46 of module snowball_atomic: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<LOOOP line 136, col 1 to line 136, col 11 of module snowball_atomic>: 2352:8963
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 136, col 19 to line 136, col 36 of module snowball_atomic: 32860
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 136, col 19 to line 136, col 26 of module snowball_atomic: 23897
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 137, col 22 to line 137, col 42 of module snowball_atomic: 8963
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 138, col 33 to line 138, col 48 of module snowball_atomic: 5639
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 139, col 41 to line 139, col 111 of module snowball_atomic: 3179
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 140, col 44 to line 140, col 51 of module snowball_atomic: 3179
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 141, col 49 to line 141, col 95 of module snowball_atomic: 801
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 142, col 52 to line 142, col 55 of module snowball_atomic: 2378
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 143, col 52 to line 143, col 69 of module snowball_atomic: 2378
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 144, col 41 to line 144, col 56 of module snowball_atomic: 3179
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 145, col 38 to line 147, col 84 of module snowball_atomic: 2460
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 148, col 30 to line 148, col 63 of module snowball_atomic: 5639
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 149, col 30 to line 149, col 64 of module snowball_atomic: 3324
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 150, col 30 to line 150, col 70 of module snowball_atomic: 3324
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 151, col 19 to line 152, col 72 of module snowball_atomic: 8963
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<WAIT line 154, col 1 to line 154, col 10 of module snowball_atomic>: 1224:4522
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 154, col 18 to line 154, col 34 of module snowball_atomic: 28409
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 154, col 18 to line 154, col 25 of module snowball_atomic: 23887
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 155, col 21 to line 155, col 28 of module snowball_atomic: 4522
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 156, col 26 to line 156, col 63 of module snowball_atomic: 1204
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 157, col 26 to line 157, col 63 of module snowball_atomic: 3318
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 158, col 18 to line 160, col 62 of module snowball_atomic: 4522
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<CONV0 line 162, col 1 to line 162, col 11 of module snowball_atomic>: 23:1207
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 162, col 19 to line 162, col 36 of module snowball_atomic: 25088
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 162, col 19 to line 162, col 26 of module snowball_atomic: 23881
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 164, col 24 to line 164, col 62 of module snowball_atomic: 1207
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 164, col 24 to line 164, col 51 of module snowball_atomic: 1207
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 164, col 36 to line 164, col 50 of module snowball_atomic: 1207
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 112, col 20 to line 112, col 53 of module snowball_atomic: 1207
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 112, col 39 to line 112, col 52 of module snowball_atomic: 5201
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 112, col 30 to line 112, col 36 of module snowball_atomic: 1207
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 164, col 49 to line 164, col 49 of module snowball_atomic: 1207
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 164, col 58 to line 164, col 62 of module snowball_atomic: 1207
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 165, col 32 to line 165, col 75 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 166, col 32 to line 166, col 67 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 168, col 43 to line 168, col 79 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 170, col 43 to line 170, col 58 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 172, col 43 to line 172, col 81 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 173, col 43 to line 173, col 87 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 174, col 43 to line 174, col 60 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 175, col 43 to line 175, col 106 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 177, col 54 to line 177, col 97 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 179, col 54 to line 179, col 71 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 180, col 43 to line 180, col 59 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 181, col 32 to line 181, col 35 of module snowball_atomic: 1207
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 182, col 32 to line 183, col 76 of module snowball_atomic: 1207
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  line 163, col 28 to line 163, col 30 of module snowball_atomic: 1207:2414
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 184, col 19 to line 184, col 53 of module snowball_atomic: 1207
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 185, col 19 to line 185, col 79 of module snowball_atomic: 1207
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<CONV1 line 187, col 1 to line 187, col 11 of module snowball_atomic>: 1166:3319
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 187, col 19 to line 187, col 36 of module snowball_atomic: 27198
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 187, col 19 to line 187, col 26 of module snowball_atomic: 23879
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 189, col 24 to line 189, col 62 of module snowball_atomic: 3319
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 189, col 24 to line 189, col 51 of module snowball_atomic: 3319
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 189, col 36 to line 189, col 50 of module snowball_atomic: 3319
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 112, col 20 to line 112, col 53 of module snowball_atomic: 3319
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 112, col 39 to line 112, col 52 of module snowball_atomic: 14078
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 112, col 30 to line 112, col 36 of module snowball_atomic: 3319
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 189, col 49 to line 189, col 49 of module snowball_atomic: 3319
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 189, col 58 to line 189, col 62 of module snowball_atomic: 3319
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 190, col 32 to line 190, col 65 of module snowball_atomic: 3288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 191, col 35 to line 191, col 65 of module snowball_atomic: 3288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 192, col 40 to line 192, col 79 of module snowball_atomic: 3288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 194, col 43 to line 194, col 58 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 195, col 35 to line 195, col 63 of module snowball_atomic: 3288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 196, col 43 to line 196, col 81 of module snowball_atomic: 3288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 197, col 43 to line 197, col 87 of module snowball_atomic: 3288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 198, col 43 to line 198, col 60 of module snowball_atomic: 3288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 199, col 43 to line 199, col 106 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 201, col 54 to line 201, col 97 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 203, col 54 to line 203, col 71 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 204, col 43 to line 204, col 59 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 205, col 32 to line 205, col 35 of module snowball_atomic: 31
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 206, col 32 to line 207, col 66 of module snowball_atomic: 31
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  line 188, col 28 to line 188, col 30 of module snowball_atomic: 3319:6638
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 208, col 19 to line 208, col 52 of module snowball_atomic: 3319
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 209, col 19 to line 210, col 42 of module snowball_atomic: 3319
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 215, col 1 to line 215, col 11 of module snowball_atomic>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 215, col 19 to line 215, col 56 of module snowball_atomic: 4767
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 216, col 19 to line 216, col 32 of module snowball_atomic: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(20) at 2020-05-22 01:43:21: 17,954 states generated (507,892 s/min), 4,766 distinct states found (134,823 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+17954 states generated, 4766 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 2125ms at (2020-05-22 01:43:21)
+@!@!@ENDMSG 2186 @!@!@
